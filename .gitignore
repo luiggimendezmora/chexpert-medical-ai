@@ -1,0 +1,26 @@
+# Data — never commit the dataset
+data/archive/
+data/*.csv
+
+# Trained models — too large for GitHub
+outputs/models/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.egg-info/
+
+# Jupyter checkpoints
+notebooks/.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
