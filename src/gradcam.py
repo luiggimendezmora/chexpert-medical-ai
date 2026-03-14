@@ -44,7 +44,3 @@ def visualize_gradcam(image_path, class_idx, model, device, save_path=None):
     if save_path:
         plt.savefig(save_path, dpi=150)
     plt.show()
-
-git add .
-git commit -m "updating gitignore"
-git push
