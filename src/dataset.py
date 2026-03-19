@@ -3,7 +3,7 @@ from torch.utils.data import Dataset
 from PIL import Image
 import pandas as pd
 import numpy as np
-
+import os
 
 class CheXpertDataset(Dataset):
     def __init__(self, csv_path, transform=None, uncertainty_policy='zeros'):
@@ -32,7 +32,7 @@ class CheXpertDataset(Dataset):
         return len(self.df)
 
     def __getitem__(self, idx):
-        img_path = self.df.iloc[idx]['Path']
+        img_path = os.path.join('..', 'data', 'archive', self.df.iloc[idx]['Path'].replace('CheXpert-v1.0-small/', ''))
         image = Image.open(img_path).convert('RGB')
 
         if self.transform:

@@ -6,7 +6,7 @@ Brief, honest description of the task.
 ## What this model does NOT do
 - It is not a diagnostic tool. It is a decision-support aid.
 - It does not replace radiologist review under any circumstance.
-- It was not trained or validated on data from [your target hospital/region].
+- It was not trained or validated on data from European hospitals or non-US patient populations.
 
 ## Known limitations
 
@@ -25,7 +25,20 @@ This introduces a conservative bias — the model may underdetect
 pathologies in ambiguous cases.
 
 ### Fairness gaps
-[Insert your findings from the fairness notebook here]
+
+Analysis on the validation set revealed performance disparities across demographic groups:
+
+**By sex:**
+- Atelectasis: AUC-ROC 0.81 (Male) vs 0.65 (Female) — largest gap observed
+- Consolidation: AUC-ROC 0.96 (Male) vs 0.89 (Female)
+- Edema and Pleural Effusion: minimal gap, performance comparable across sexes
+
+**By age group:**
+- Atelectasis: AUC-ROC 0.87 (<40) vs 0.65 (60+) — significant degradation in older patients
+- Edema: AUC-ROC 1.00 (<40) — interpret with caution, only 34 patients in this group
+- Other pathologies relatively stable across age groups
+
+These gaps should be investigated before any clinical deployment.
 
 ## Regulatory context
 Any clinical deployment in the EU would require CE marking under MDR 2017/745. 

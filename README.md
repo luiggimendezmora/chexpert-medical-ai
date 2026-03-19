@@ -58,13 +58,11 @@ Pathologies: `Atelectasis` · `Cardiomegaly` · `Consolidation` · `Edema` · `P
 
 | Pathology | AUC-ROC |
 |-----------|---------|
-| Atelectasis | — |
-| Cardiomegaly | — |
-| Consolidation | — |
-| Edema | — |
-| Pleural Effusion | — |
-
-*Results will be updated upon training completion.*
+| Atelectasis | 0.7419 |
+| Cardiomegaly | 0.8387 |
+| Consolidation | 0.9255 |
+| Edema | 0.9316 |
+| Pleural Effusion | 0.9204 |
 
 ### Fairness — AUC-ROC by Sex
 
@@ -122,4 +120,4 @@ including label quality, distribution shift, fairness gaps, and regulatory conte
 
 **Luiggi Ramón Méndez Mora**  
 Senior Data Scientist with 10 years of production ML experience, transitioning into AI for healthcare.  
-[LinkedIn](https://linkedin.com/in/luiggilink) · [Email](mailto:luiggi.mendezmora@gmail.com)
+[LinkedIn](https://linkedin.com/in/luiggilink) · [Email](mailto:luiggi.mendezmora@gmail.com) · [Medium](https://medium.com/@luiggilink)
