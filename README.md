@@ -4,7 +4,13 @@
 > going beyond classification to address clinical interpretability, demographic fairness,
 > and responsible deployment.
 
-![Grad-CAM Example](outputs/gradcam/pleural_effusion.png)
+| Pleural Effusion | Atelectasis |
+|-----------------|-------------|
+| ![](outputs/gradcam/pleural_effusion.png) | ![](outputs/gradcam/atelectasis.png) |
+
+| Edema | Cardiomegaly |
+|-------|-------------|
+| ![](outputs/gradcam/edema.png) | ![](outputs/gradcam/cardiomegaly.png) |
 
 ---
 
