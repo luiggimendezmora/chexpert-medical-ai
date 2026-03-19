@@ -26,19 +26,38 @@ pathologies in ambiguous cases.
 
 ### Fairness gaps
 
-Analysis on the validation set revealed performance disparities across demographic groups:
+### Fairness gaps
+
+Analysis on the validation set (234 patients) revealed performance disparities 
+across demographic groups:
 
 **By sex:**
-- Atelectasis: AUC-ROC 0.81 (Male) vs 0.65 (Female) — largest gap observed
-- Consolidation: AUC-ROC 0.96 (Male) vs 0.89 (Female)
-- Edema and Pleural Effusion: minimal gap, performance comparable across sexes
+
+| Pathology | Male (n=128) | Female (n=106) | Gap |
+|-----------|-------------|----------------|-----|
+| Atelectasis | 0.8066 | 0.6537 | 0.153 |
+| Cardiomegaly | 0.8441 | 0.8194 | 0.025 |
+| Consolidation | 0.9632 | 0.8855 | 0.078 |
+| Edema | 0.9307 | 0.9345 | 0.004 |
+| Pleural Effusion | 0.9080 | 0.9452 | -0.037 |
 
 **By age group:**
-- Atelectasis: AUC-ROC 0.87 (<40) vs 0.65 (60+) — significant degradation in older patients
-- Edema: AUC-ROC 1.00 (<40) — interpret with caution, only 34 patients in this group
-- Other pathologies relatively stable across age groups
 
-These gaps should be investigated before any clinical deployment.
+| Pathology | <40 (n=34) | 40-60 (n=75) | 60+ (n=125) |
+|-----------|-----------|--------------|-------------|
+| Atelectasis | 0.8667 | 0.8104 | 0.6494 |
+| Cardiomegaly | 0.8894 | 0.8459 | 0.8107 |
+| Consolidation | 0.9172 | 0.9508 | 0.9190 |
+| Edema | 1.0000* | 0.9015 | 0.9231 |
+| Pleural Effusion | 0.9103 | 0.9442 | 0.9017 |
+
+*Interpret with caution — only 34 patients in this age group.
+
+**Key findings:**
+- Atelectasis shows the largest fairness gap: 15 points lower AUC-ROC in women 
+  vs men, and 22 points lower in patients over 60 vs under 40.
+- Edema and Pleural Effusion are the most equitable across both sex and age.
+- These gaps should be investigated and mitigated before any clinical deployment.
 
 ## Regulatory context
 Any clinical deployment in the EU would require CE marking under MDR 2017/745. 
