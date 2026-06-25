@@ -101,8 +101,11 @@ Pathologies: `Atelectasis` · `Cardiomegaly` · `Consolidation` · `Edema` · `P
     git clone https://github.com/luiggimendezmora/chexpert-medical-ai.git
     cd chexpert-medical-ai
 
-    # 2. Install dependencies
+    # 2. Install dependencies 
+    # 2.1 Windows
     pip install -r requirements.txt
+    # 2.2 Mac
+    pip3 install -r requirements.txt
 
     # 3. Download CheXpert — see data/README.md
 
