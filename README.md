@@ -98,7 +98,7 @@ Pathologies: `Atelectasis` · `Cardiomegaly` · `Consolidation` · `Edema` · `P
 ## How to Run
 
     # 1. Clone the repository
-    git clone https://github.com/your-username/chexpert-medical-ai.git
+    git clone https://github.com/luiggimendezmora/chexpert-medical-ai.git
     cd chexpert-medical-ai
 
     # 2. Install dependencies
